@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d192b;
+  padding: 30px;
+}
+
+span {
+  color: white;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+span:hover {
+  color: #00fff7;
+}
+
+.card {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  row-gap: 20px;
+  background-color: #14253d;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px 15px #041021;
+}
+.card h1 {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.card h1:hover {
+  color: #00fff7;
+}
+.card p {
+  color: #8bacda;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.equilibrium {
+  width: 100%;
+  height: 300px;
+  background-image: url("../../images/image-equilibrium.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  margin: 0 auto 10px auto;
+  position: relative;
+  cursor: pointer;
+}
+.equilibrium:hover .equilibrium-hover {
+  opacity: 1;
+}
+
+.equilibrium-hover {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 255, 247, 0.685);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.price-and-days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #2f415b;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+}
+.price-container p {
+  color: #00fff7;
+  font-weight: 600;
+}
+
+.days-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 20px;
+}
+
+.creator-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-image: url("../../images/image-avatar.png");
+  background-size: cover;
+  background-position: center;
+}
+.creator-avatar p span {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,140 @@
+@import "./variables";
+@import "./mixins";
+
+// Reset css
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+// End Reset css
+
+// General style
+:root{
+    font-size: 10px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    @include flexCenter;
+    background-color: $neutral-clr-one;
+    padding: 30px;
+}
+
+span{
+    color: $neutral-clr-four;
+    transition: color 0.2s ease;
+    cursor: pointer;
+
+    &:hover{
+        color: $primary-clr-two;
+    }
+}
+// End General style
+
+// Card
+.card{
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    row-gap: 20px;
+    background-color: $neutral-clr-two;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px 15px #041021;
+
+    h1{
+        color: $neutral-clr-four;
+        font-family: $primary-font;
+        font-size: 2.5rem;
+        transition: color 0.3s ease;
+        cursor: pointer;
+
+        &:hover{
+            color: $primary-clr-two;
+        }
+    }
+
+    p{
+        color: $primary-clr-one;
+        font-family: $primary-font;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+}
+
+.equilibrium{
+    width: 100%;
+    height: 300px;
+    background-image: url("../../images/image-equilibrium.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    background-position: center;
+    margin: 0 auto 10px auto;
+    position: relative;
+    cursor: pointer;
+
+    &:hover{
+        .equilibrium-hover{
+            opacity: 1;
+        }
+    }
+}
+
+.equilibrium-hover{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: hsla(178, 100%, 50%, 0.685);
+    @include flexCenter;
+    transition: 0.3s ease;
+}
+
+.price-and-days{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $neutral-clr-three;
+}
+
+.price-container{
+    @include flexCenter;
+    column-gap: 8px;
+
+    p{
+        color: $primary-clr-two;
+        font-weight: 600;
+    }
+}
+
+.days-container{
+    @include flexCenter;
+    column-gap: 8px;
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+
+.creator-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $neutral-clr-four;
+    background-image: url("../../images/image-avatar.png");
+    background-size: cover;
+    background-position: center;
+
+    p span{
+        color: $neutral-clr-four;
+    }
+}
+// End Card
+
